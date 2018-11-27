@@ -1,0 +1,14 @@
+galaxy_info:
+  author: Jan Beinke
+  description: Ansible role to install borg
+
+  license: LGPLv3
+
+  min_ansible_version: 2.4
+
+  galaxy_tags:
+  - borg
+  - borgbackup
+  - backup
+
+dependencies: []
