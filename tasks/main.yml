@@ -17,12 +17,12 @@
       gpg --no-default-keyring --keyring {{borg_gpg_keyring}} --verify {{borg_executable}}.asc
       chmod +x {{borg_executable}}
       cp {{borg_executable}} {{borg_install_path}}/borg{{borg_version}}
-      ln -s borg{{borg_version}} {{borg_install_path}}/borg{{borg_version}}
+      ln -sf borg{{borg_version}} {{borg_install_path}}/borg
     args:
       creates: "{{borg_install_path}}/borg{{borg_version}}"
-    become: "{{borg_install_become}}"
 
 
+  become: "{{borg_install_become}}"
   tags:
   - borg
   - backup
